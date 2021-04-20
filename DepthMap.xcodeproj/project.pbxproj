@@ -24,6 +24,7 @@
 		CE717F1D262E6A5E000EB920 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE717F24262E74F0000EB920 /* ARSessionDelegateHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSessionDelegateHandler.swift; sourceTree = "<group>"; };
 		CE717F28262E857F000EB920 /* ARFrame+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARFrame+Extension.swift"; sourceTree = "<group>"; };
+		CEA63697262EAA7800FB4E8D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +41,7 @@
 		CE717F06262E6A5E000EB920 = {
 			isa = PBXGroup;
 			children = (
+				CEA63697262EAA7800FB4E8D /* README.md */,
 				CE717F11262E6A5E000EB920 /* DepthMap */,
 				CE717F10262E6A5E000EB920 /* Products */,
 			);
