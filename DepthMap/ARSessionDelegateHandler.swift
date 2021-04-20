@@ -21,12 +21,39 @@ extension ARViewContainer {
             return documentURL
         }
         
+        var pngURL: NSURL {
+            let pngURL = documentURL.appendingPathComponent("png", isDirectory: true)
+            if !FileManager.default.fileExists(atPath: pngURL!.path) {
+                do {
+                    try FileManager.default.createDirectory(at: pngURL!, withIntermediateDirectories: true, attributes: nil)
+                } catch {
+                    print(error.localizedDescription)
+                }
+            }
+            
+            return pngURL! as NSURL
+        }
+        
+        var csvURL: NSURL {
+            let csvURL = documentURL.appendingPathComponent("csv", isDirectory: true)
+            if !FileManager.default.fileExists(atPath: csvURL!.path) {
+                do {
+                    try FileManager.default.createDirectory(at: csvURL!, withIntermediateDirectories: true, attributes: nil)
+                } catch {
+                    print(error.localizedDescription)
+                }
+            }
+            
+            return csvURL! as NSURL
+        }
+        
         var dateFormat: DateFormatter {
             let format = DateFormatter()
             format.dateFormat = "yyyyMMddHHmmssSSS"
             return format
         }
         
+        // Initialize
         init(_ control: ARViewContainer) {
             self.arVC = control
             super.init()
@@ -85,7 +112,7 @@ extension ARViewContainer {
             // CSVファイルに書き出す
             let timestamp = dateFormat.string(from: Date())
             let filename = "depthmap_\(timestamp).csv"
-            let fileURL = documentURL.appendingPathComponent(filename)
+            let fileURL = csvURL.appendingPathComponent(filename)
 
             guard let filepath = fileURL?.path else {
                 return
@@ -101,13 +128,13 @@ extension ARViewContainer {
             }
             
             // PNGファイルに書き出す
-//            let depthMapImage = frame.depthMapImage
-//            let filename = "depthmap_\(timestamp).png"
-//            let fileURL = documentURL.appendingPathComponent(filename)
-//
-//            if let image = depthMapImage?.pngData() {
-//                try? image.write(to: fileURL!)
-//            }
+            let depthMapImage = frame.depthMapImage
+            let filenameImage = "depthmap_\(timestamp).png"
+            let fileURLImage = pngURL.appendingPathComponent(filenameImage)
+
+            if let image = depthMapImage?.pngData() {
+                try? image.write(to: fileURLImage!)
+            }
             
         }
     }

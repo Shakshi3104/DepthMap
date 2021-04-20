@@ -31,7 +31,7 @@ struct ARViewContainer: UIViewRepresentable {
         let configuration = ARWorldTrackingConfiguration()
         
         if type(of: configuration).supportsFrameSemantics(.sceneDepth) {
-            configuration.frameSemantics = .sceneDepth
+            configuration.frameSemantics = [.sceneDepth, .smoothedSceneDepth]
         }
         
         uiView.session.run(configuration)
