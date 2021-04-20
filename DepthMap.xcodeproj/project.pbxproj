@@ -9,19 +9,21 @@
 /* Begin PBXBuildFile section */
 		CE717F13262E6A5E000EB920 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE717F12262E6A5E000EB920 /* AppDelegate.swift */; };
 		CE717F15262E6A5E000EB920 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE717F14262E6A5E000EB920 /* ContentView.swift */; };
-		CE717F17262E6A5E000EB920 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = CE717F16262E6A5E000EB920 /* Experience.rcproject */; };
 		CE717F19262E6A5E000EB920 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE717F18262E6A5E000EB920 /* Assets.xcassets */; };
 		CE717F1C262E6A5E000EB920 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE717F1B262E6A5E000EB920 /* Preview Assets.xcassets */; };
+		CE717F25262E74F0000EB920 /* ARSessionDelegateHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE717F24262E74F0000EB920 /* ARSessionDelegateHandler.swift */; };
+		CE717F29262E857F000EB920 /* ARFrame+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE717F28262E857F000EB920 /* ARFrame+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CE717F0F262E6A5E000EB920 /* DepthMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DepthMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE717F12262E6A5E000EB920 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE717F14262E6A5E000EB920 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		CE717F16262E6A5E000EB920 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		CE717F18262E6A5E000EB920 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE717F1B262E6A5E000EB920 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CE717F1D262E6A5E000EB920 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE717F24262E74F0000EB920 /* ARSessionDelegateHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSessionDelegateHandler.swift; sourceTree = "<group>"; };
+		CE717F28262E857F000EB920 /* ARFrame+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARFrame+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +58,8 @@
 			children = (
 				CE717F12262E6A5E000EB920 /* AppDelegate.swift */,
 				CE717F14262E6A5E000EB920 /* ContentView.swift */,
-				CE717F16262E6A5E000EB920 /* Experience.rcproject */,
+				CE717F24262E74F0000EB920 /* ARSessionDelegateHandler.swift */,
+				CE717F28262E857F000EB920 /* ARFrame+Extension.swift */,
 				CE717F18262E6A5E000EB920 /* Assets.xcassets */,
 				CE717F1D262E6A5E000EB920 /* Info.plist */,
 				CE717F1A262E6A5E000EB920 /* Preview Content */,
@@ -142,8 +145,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE717F15262E6A5E000EB920 /* ContentView.swift in Sources */,
+				CE717F25262E74F0000EB920 /* ARSessionDelegateHandler.swift in Sources */,
 				CE717F13262E6A5E000EB920 /* AppDelegate.swift in Sources */,
-				CE717F17262E6A5E000EB920 /* Experience.rcproject in Sources */,
+				CE717F29262E857F000EB920 /* ARFrame+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
