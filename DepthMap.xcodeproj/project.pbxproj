@@ -13,6 +13,7 @@
 		CE717F1C262E6A5E000EB920 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE717F1B262E6A5E000EB920 /* Preview Assets.xcassets */; };
 		CE717F25262E74F0000EB920 /* ARSessionDelegateHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE717F24262E74F0000EB920 /* ARSessionDelegateHandler.swift */; };
 		CE717F29262E857F000EB920 /* ARFrame+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE717F28262E857F000EB920 /* ARFrame+Extension.swift */; };
+		CEA6369C262EBCA200FB4E8D /* depthmap.gif in Resources */ = {isa = PBXBuildFile; fileRef = CEA6369B262EBCA200FB4E8D /* depthmap.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		CE717F24262E74F0000EB920 /* ARSessionDelegateHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSessionDelegateHandler.swift; sourceTree = "<group>"; };
 		CE717F28262E857F000EB920 /* ARFrame+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARFrame+Extension.swift"; sourceTree = "<group>"; };
 		CEA63697262EAA7800FB4E8D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		CEA6369B262EBCA200FB4E8D /* depthmap.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = depthmap.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +43,7 @@
 		CE717F06262E6A5E000EB920 = {
 			isa = PBXGroup;
 			children = (
+				CEA6369A262EBC9100FB4E8D /* materials */,
 				CEA63697262EAA7800FB4E8D /* README.md */,
 				CE717F11262E6A5E000EB920 /* DepthMap */,
 				CE717F10262E6A5E000EB920 /* Products */,
@@ -75,6 +78,14 @@
 				CE717F1B262E6A5E000EB920 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CEA6369A262EBC9100FB4E8D /* materials */ = {
+			isa = PBXGroup;
+			children = (
+				CEA6369B262EBCA200FB4E8D /* depthmap.gif */,
+			);
+			path = materials;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE717F1C262E6A5E000EB920 /* Preview Assets.xcassets in Resources */,
+				CEA6369C262EBCA200FB4E8D /* depthmap.gif in Resources */,
 				CE717F19262E6A5E000EB920 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
