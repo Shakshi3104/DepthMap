@@ -60,13 +60,6 @@ extension ARViewContainer {
         }
         
         func session(_ session: ARSession, didUpdate frame: ARFrame) {
-//            guard let depthData = frame.smoothedSceneDepth ?? frame.sceneDepth else {
-//                return
-//            }
-//
-//            // 深度マップを取得
-//            let depthMap = depthData.depthMap
-            
             // 深度マップを取得 (extension)
             guard let depthMap = frame.depthMap else { return }
             
@@ -94,38 +87,38 @@ extension ARViewContainer {
             
             let fixedArray = depthArray.map( { $0.isNaN ? 0 : $0 })
             
-//            print("depth map size: \(width) * \(height)")
+//            print("🎛 depth map size: \(width) * \(height)")
 //            let capturedImage = frame.capturedImage
 //
 //            let imageWidth = CVPixelBufferGetWidth(capturedImage)
 //            let imageHeight = CVPixelBufferGetHeight(capturedImage)
 //
-//            print("image size: \(imageWidth) * \(imageHeight)")
+//            print("🎛 image size: \(imageWidth) * \(imageHeight)")
             
             /*
              capturedImageの解像度は1920*1440
              depthMapの解像度は256*192
              */
             
-            print(fixedArray[width * 10 + 20])
+            print("🎛 \(fixedArray[width * 10 + 20])")
             
             // CSVファイルに書き出す
             let timestamp = dateFormat.string(from: Date())
-            let filename = "depthmap_\(timestamp).csv"
-            let fileURL = csvURL.appendingPathComponent(filename)
-
-            guard let filepath = fileURL?.path else {
-                return
-            }
-
-            let depthMapData = fixedArray.map { String(describing: $0)} .joined(separator: ",")
-
-            do {
-                try depthMapData.write(toFile: filepath, atomically: true, encoding: .utf8)
-            }
-            catch let error as NSError {
-                print("Failure to Write File\n\(error)")
-            }
+//            let filename = "depthmap_\(timestamp).csv"
+//            let fileURL = csvURL.appendingPathComponent(filename)
+//
+//            guard let filepath = fileURL?.path else {
+//                return
+//            }
+//
+//            let depthMapData = fixedArray.map { String(describing: $0)} .joined(separator: ",")
+//
+//            do {
+//                try depthMapData.write(toFile: filepath, atomically: true, encoding: .utf8)
+//            }
+//            catch let error as NSError {
+//                print("Failure to Write File\n\(error)")
+//            }
             
             // PNGファイルに書き出す
             let depthMapImage = frame.depthMapImage
