@@ -38,6 +38,7 @@ extension ARFrame {
         let scaleY = 192.0 / Double(imageHeight)
         
         let ciImage = CIImage(cvPixelBuffer: capturedImage)
+        // resize as the scale of depth map
         let resizedImage = ciImage.resize(scaleX: scaleX, scaleY: scaleY)
         
         guard let resizedImage = resizedImage else {
@@ -52,6 +53,7 @@ extension ARFrame {
 
 // MARK: - CIImage extension
 extension CIImage {
+    /// https://qiita.com/yyokii/items/8d462ba0df69fcfe29d2
     func resize(scaleX: CGFloat, scaleY: CGFloat) -> CIImage? {
         let matrix = CGAffineTransform(scaleX: scaleX, y: scaleY)
         return self.transformed(by: matrix)
